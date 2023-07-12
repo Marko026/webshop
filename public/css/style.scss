@@ -1,0 +1,553 @@
+@import "../partials/variables";
+@import "../partials/fonts";
+@import "../partials/mixins.scss";
+@import "../partials/basics.scss";
+
+.top-info {
+  background-color: $text-color;
+}
+
+header {
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+}
+
+.navbar {
+  .navbar-brand {
+    color: $primary;
+  }
+
+  .nav-link {
+    color: $text-color;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  .number {
+    background-color: $primary;
+    color: $white;
+    border-radius: 50%;
+    padding: 0 10px;
+    font-size: 0.8rem !important;
+    top: -5px !important;
+    left: 51%;
+
+
+
+
+
+
+  }
+}
+
+
+.hero {
+  background-color: $background;
+
+  .carousel-item {
+
+    .hero-content {
+      @include mobile {
+        padding: 20px 20px !important;
+      }
+
+      @include tablet {
+        padding: 30px 30px !important;
+      }
+
+      h1 {
+        color: $primary;
+        font-weight: lighter;
+
+        @include smallMobile {
+          font-size: 2rem !important;
+        }
+
+        @include tablet {
+          font-size: 1.5rem !important;
+        }
+
+      }
+
+      @include smallMobile {
+        h2 {
+          font-size: 1rem;
+        }
+
+        p {
+          font-size: 0.5rem;
+        }
+      }
+
+      @include tablet {
+        h2 {
+          font-size: 1.2rem;
+        }
+
+        p {
+          font-size: 0.7rem;
+        }
+      }
+
+    }
+
+    div {
+      flex: 0 0 40%;
+    }
+  }
+
+  .carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2359ab6e'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+    position: relative;
+    left: -100px;
+  }
+
+  .carousel-control-next-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2359ab6e'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    position: relative;
+    right: -100px;
+  }
+
+  .carousel-indicators button {
+    background-color: $primary;
+  }
+}
+
+//categories
+
+.categories {
+  padding: $padding;
+
+  .categ-items {
+    padding: $padding;
+
+    .categ-item {
+      img {
+        width: 400px;
+        height: 400px;
+        object-fit: contain;
+      }
+
+      a {
+        background-color: $primary;
+        color: $white;
+        transition: 0.3s;
+        border: 1px solid $primary;
+
+        &:hover {
+          background-color: $white;
+          color: $primary;
+        }
+      }
+    }
+
+  }
+}
+
+//products
+.products {
+  padding: $padding;
+  background-color: $background;
+
+  .product-title {
+    padding: $padding;
+  }
+
+  .product-items {
+    flex: 0 0 32%;
+    transition: 0.3s;
+
+    &:hover {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+
+    .prod-img {
+      height: 300px;
+      overflow: hidden;
+
+      img {
+        height: 200px;
+        width: 200px;
+        object-fit: contain;
+        transition: 0.3s;
+      }
+
+      &:hover img {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+//footer
+
+footer {
+  padding: $padding;
+  padding-bottom: 0;
+  background-color: $footer-bg;
+
+  .row {
+    border-bottom: 1px solid $white;
+    padding: 0;
+
+  }
+
+  .footer-item {
+    padding: 0;
+
+    h3 {
+      color: $primary;
+    }
+
+  }
+
+  hr {
+    color: $white;
+    opacity: 1;
+  }
+
+  h3 {
+    color: $white;
+    font-weight: 300;
+  }
+
+  ul {
+    li {
+      a {
+        font-size: 1.4rem;
+        font-weight: 300;
+        transition: 0.2s;
+
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+  }
+
+  .footer-social {
+
+    .subscribe {
+      input {
+        background-color: $footer-bg;
+        opacity: 0.3;
+
+
+        &::placeholder {
+          color: $white;
+          opacity: 0.5;
+        }
+      }
+
+      button {
+        background-color: $primary;
+        color: $link-color;
+        font-weight: 300;
+        letter-spacing: 1px;
+        border: transparent;
+        transition: 0.3s;
+
+        &:hover {
+          background-color: $white;
+          color: $primary;
+        }
+      }
+    }
+  }
+
+  .copyright {
+    opacity: 0.5;
+  }
+}
+
+//about-hero
+
+.about-hero {
+  background-color: $primary;
+  color: $white;
+}
+
+.services {
+  padding: $padding;
+
+  .services-icon-wap {
+    transition: 0.4s;
+
+    i {
+      font-size: 3rem;
+      color: $primary;
+    }
+
+    &:hover {
+      background-color: $primary;
+
+      i {
+        color: $white;
+      }
+
+      h2 {
+        color: $white;
+      }
+    }
+  }
+}
+
+// brands
+
+.brands {
+  background-color: $background;
+
+  .text-light {
+    color: gray !important;
+  }
+
+  .brand-img {
+    filter: grayscale(100%);
+    opacity: 0.5;
+    transition: 0.3s;
+
+    &:hover {
+      filter: grayscale(0%);
+      opacity: 1;
+    }
+  }
+}
+
+//prduct-section  
+.product-section {
+
+  .product-items {
+
+    article {
+      transition: 0.3s;
+
+      &:hover {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      }
+    }
+
+    &:hover {
+
+      img {
+        scale: 1.1;
+        transition: 0.3s;
+        filter: opacity(0.5);
+
+      }
+
+
+      ul {
+        display: block;
+      }
+    }
+
+    article {
+
+      img {
+        object-fit: contain;
+        height: 400px;
+        width: 200px;
+      }
+    }
+  }
+
+  .add-product {
+    transition: 0.3s;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+    ul {
+      display: none;
+
+      li {
+        a {
+          display: inline-block;
+          margin-bottom: 10px;
+
+          i {
+            background-color: $primary;
+            font-size: 1.5rem;
+            padding: 10px 15px;
+            border-radius: 3px;
+          }
+        }
+      }
+    }
+  }
+}
+
+//details
+
+.details {
+  background-color: $background;
+
+  .detail-items {
+    flex: 0 0 49%;
+
+    img {
+      height: 560px;
+      width: 400px;
+      object-fit: contain;
+    }
+  }
+
+  .quantity {
+    button {
+      background-color: $primary;
+      color: $white;
+      border: 1px solid $primary;
+      transition: 0.3s;
+
+
+      &:hover {
+        background-color: $white;
+        color: $primary;
+      }
+    }
+  }
+}
+
+.contact {
+  .contact-title {
+    background-color: $background;
+  }
+
+  .map {
+    background: $background;
+  }
+}
+
+//carr
+
+.cart {
+  margin-bottom: 2rem;
+
+  @include smallMobile {
+    .cart-img {
+      width: 30px !important;
+      height: 30px !important;
+    }
+  }
+
+  .cart-shop {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .back-to-shop {
+    background-color: $footer-bg;
+    color: $primary;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+
+  .fa-long-arrow-left {
+    color: $primary;
+  }
+
+  .payment-info {
+    background-color: $footer-bg !important;
+
+
+    color: $white !important;
+
+    .radio {
+      margin-bottom: 10px;
+
+      span {
+        padding: 1px 12px;
+        border: 1px solid $white;
+        display: inline-block;
+        color: $primary;
+        border-radius: 3px;
+        text-transform: uppercase;
+        font-size: 11px;
+        font-weight: 300;
+
+      }
+    }
+  }
+
+  .form-control {
+    .credit-inputs:focus {
+      background: rgb(102, 102, 221);
+      border: rgb(102, 102, 221);
+    }
+  }
+
+  .line {
+    border-bottom: 1px solid rgb(102, 102, 221);
+  }
+
+  .credit-inputs {
+    background: $primary ;
+    color: #fff;
+    border-color: $primary;
+
+    &::placeholder {
+      color: $white;
+      font-size: 13px;
+    }
+  }
+
+  .information {
+    margin-bottom: 5px;
+
+    span {
+      font-weight: 500;
+      font-size: 12px;
+    }
+  }
+
+  .items {
+    -webkit-box-shadow: 5px 5px 4px -1px rgba(0, 0, 0, 0.25);
+    box-shadow: 5px 5px 4px -1px rgba(0, 0, 0, 0.08);
+  }
+
+  .spec {
+    font-size: 11px;
+  }
+
+  label {
+    .radio {
+      cursor: pointer;
+
+      input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+    }
+  }
+
+  .cart-button {
+    background-color: $primary;
+    color: $white;
+  }
+
+}
+
+.short-text {
+  max-width: 150px !important;
+  overflow: hidden !important;
+  text-overflow: "ellipsis" !important;
+  white-space: nowrap !important;
+}
+
+.demo-link {
+  font-size: 10px !important;
+}
+
+//section admin
+.admin {
+  h1 {
+    color: $primary;
+  }
+}
