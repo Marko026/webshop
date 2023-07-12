@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/webshop/static/css/main.98ec47ca.css",
+    "main.js": "/webshop/static/js/main.bf0516f0.js",
+    "index.html": "/webshop/index.html",
+    "main.98ec47ca.css.map": "/webshop/static/css/main.98ec47ca.css.map",
+    "main.bf0516f0.js.map": "/webshop/static/js/main.bf0516f0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.98ec47ca.css",
+    "static/js/main.bf0516f0.js"
+  ]
+}
